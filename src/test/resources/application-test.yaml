@@ -1,0 +1,8 @@
+DB_URL: jdbc:postgresql://localhost:5432/provided-by-testcontainers
+DB_USERNAME: test
+DB_PASSWORD: test
+MAIL_HOST: localhost
+MAIL_PORT: 1025
+JWT_SECRET: dGVzdC1vbmx5LWp3dC1zZWNyZXQtZm9yLXNlY3VyZXZhdWx0LXRlc3Rz
+ADMIN_MAIL: admin@securevault.test
+ADMIN_PASSWORD: test-only-admin-password

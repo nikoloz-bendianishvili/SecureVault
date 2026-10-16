@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: SecureVault
+
+  config:
+    import: optional:file:.env[.properties]
+
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+  data:
+    web:
+      pageable:
+        max-page-size: 100
+        serialization-mode: via-dto
+
+  mail:
+    host: ${MAIL_HOST}
+    port: ${MAIL_PORT}
+
+app:
+  mail:
+    from: no-reply@securevault.local
+  frontend-url: http://localhost:3000
+  jwt:
+    secret: ${JWT_SECRET}
+    access-token-ttl: 15m
+  admin:
+    email: ${ADMIN_MAIL}
+    password: ${ADMIN_PASSWORD}
